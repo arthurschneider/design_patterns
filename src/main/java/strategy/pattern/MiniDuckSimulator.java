@@ -1,5 +1,9 @@
 package strategy.pattern;
 
+import strategy.pattern.behavior.FlyWithWings;
+import strategy.pattern.models.Duck;
+import strategy.pattern.models.MallardDuck;
+
 public class MiniDuckSimulator {
 
     public static void main(String[] args) {

@@ -1,4 +1,7 @@
-package strategy.pattern;
+package strategy.pattern.models;
+
+import strategy.pattern.behavior.FlyBehavior;
+import strategy.pattern.behavior.QuackBehavior;
 
 public abstract class Duck {
 
