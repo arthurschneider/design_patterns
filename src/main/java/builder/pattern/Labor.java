@@ -1,7 +1,5 @@
 package builder.pattern;
 
-import builder.pattern.model.NutritionFacts;
-
 public class Labor {
 
     public static void main(String[] args) {

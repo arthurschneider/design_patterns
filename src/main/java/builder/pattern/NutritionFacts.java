@@ -1,4 +1,4 @@
-package builder.pattern.model;
+package builder.pattern;
 
 public class NutritionFacts {
 
