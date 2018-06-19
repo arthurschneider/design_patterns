@@ -1,9 +1,11 @@
 package command.pattern.controller;
 
+import command.pattern.commands.Command;
 import command.pattern.commands.GarageDoorCloseCommand;
 import command.pattern.commands.GarageDoorOpenCommand;
 import command.pattern.commands.LightOffCommand;
 import command.pattern.commands.LightOnCommand;
+import command.pattern.commands.MacroCommand;
 import command.pattern.commands.StereoOffCommand;
 import command.pattern.commands.StereoOnWithCDCommand;
 import command.pattern.models.GarageDoor;
@@ -42,7 +44,21 @@ public class RemoteApplication {
         
         control.onButtonWasPushed(1);
         control.offButtonWasPushed(0);
+
+        control.undoButtonWasPushed();
         
+        Command[] homeComming = {lightOn, stereoOn};
+        Command[] homeLeaving = {lightOff, stereoOff};
+        
+        MacroCommand macroCommandCommingHome = new MacroCommand(homeComming);
+        MacroCommand macroCommandLeavingHome = new MacroCommand(homeLeaving);
+        control.setCommand(3, macroCommandCommingHome, macroCommandLeavingHome);
+        
+        System.out.println(control);
+        System.out.println("\nPerson pushed MacroCommand on\n");
+        control.onButtonWasPushed(3);
+        System.out.println("\nPerson pushed MacroCommand off\n");
+        control.offButtonWasPushed(3);
     }
 
 }

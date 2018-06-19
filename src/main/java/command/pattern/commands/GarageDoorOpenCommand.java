@@ -23,4 +23,11 @@ public class GarageDoorOpenCommand implements Command {
         door.stop();
     }
 
+    @Override
+    public void undo() {
+        door.lightOff();
+        door.down();
+        door.stop();
+    }
+
 }
