@@ -1,5 +1,7 @@
+
 package templatemethod.pattern.model;
 
+import java.util.Scanner;
 
 /**
  * @author aschneider
@@ -17,10 +19,22 @@ public class Coffe extends CaffeineBeverage {
     void addCondiments() {
         System.out.println("Adding sugar and milk");
     }
-    
+
     @Override
-    void someHook() {
-        System.out.println("Bring coffe to the customer table");
+    boolean customerWantsCondiments() {
+        String answer = askCustomerAboutCondiments();
+        return answer.toLowerCase().startsWith("y") || answer.toLowerCase().startsWith("j");
+
+    }
+
+    private String askCustomerAboutCondiments() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Do you wand condiments? : ");
+
+        String input = scanner.nextLine();
+        scanner.close();
+
+        return input;
     }
 
 }

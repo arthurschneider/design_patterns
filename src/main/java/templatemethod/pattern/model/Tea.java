@@ -1,5 +1,5 @@
-package templatemethod.pattern.model;
 
+package templatemethod.pattern.model;
 
 /**
  * @author aschneider
