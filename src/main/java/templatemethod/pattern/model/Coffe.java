@@ -1,8 +1,6 @@
 
 package templatemethod.pattern.model;
 
-import java.util.Scanner;
-
 /**
  * @author aschneider
  * @since 08.08.2018
@@ -24,17 +22,12 @@ public class Coffe extends CaffeineBeverage {
     boolean customerWantsCondiments() {
         String answer = askCustomerAboutCondiments();
         return answer.toLowerCase().startsWith("y") || answer.toLowerCase().startsWith("j");
-
     }
 
     private String askCustomerAboutCondiments() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Do you wand condiments? : ");
+        System.out.print("Do you want condiments for your coffe? : ");
 
-        String input = scanner.nextLine();
-        scanner.close();
-
-        return input;
+        return  System.console().readLine();
     }
 
 }

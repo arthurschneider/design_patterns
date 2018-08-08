@@ -12,16 +12,15 @@ import templatemethod.pattern.model.Tea;
 public class CoffeShop {
 
     public static void main(String[] args) {
-
         System.out.println("--------------Making tea---------------");
         Tea tea = new Tea();
         tea.prepareRecipe();
 
         System.out.println("\n\n");
+
         System.out.println("--------------Making coffe-------------");
         Coffe coffe = new Coffe();
         coffe.prepareRecipe();
-
     }
 
 }

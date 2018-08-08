@@ -12,10 +12,10 @@ public abstract class CaffeineBeverage {
         boilWater();
         brew();
         pourInCup();
+        
         if (customerWantsCondiments()) {
             addCondiments();
         }
-
     }
 
     boolean customerWantsCondiments() {
