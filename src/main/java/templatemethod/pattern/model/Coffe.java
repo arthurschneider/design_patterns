@@ -1,6 +1,8 @@
 
 package templatemethod.pattern.model;
 
+import java.util.Scanner;
+
 /**
  * @author aschneider
  * @since 08.08.2018
@@ -25,9 +27,13 @@ public class Coffe extends CaffeineBeverage {
     }
 
     private String askCustomerAboutCondiments() {
+        String answer;
         System.out.print("Do you want condiments for your coffe? : ");
-
-        return  System.console().readLine();
+        try(Scanner scan = new Scanner(System.in)){
+            
+            answer = scan.next();
+        }
+        return answer;
     }
 
 }
