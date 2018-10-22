@@ -24,6 +24,6 @@ public class SimplePizzaFactory {
         case VEGGIE:
             return new VeggiePizza();
         }
-        return null;
+        return new CheesePizza();
     }
 }
